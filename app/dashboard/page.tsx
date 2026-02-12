@@ -19,7 +19,7 @@ export default function Dashboard() {
 
   const fetchTasks = async () => {
     try {
-      // ✅ FIXED: Use API_URL instead of hardcoded localhost
+      // ✅ FIXED: Correct fetch syntax with parentheses
       const res = await fetch(`${API_URL}/api/tasks`, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -48,7 +48,7 @@ export default function Dashboard() {
     }
 
     try {
-      // ✅ FIXED: Use API_URL instead of hardcoded localhost
+      // ✅ FIXED: Correct fetch syntax with parentheses
       await fetch(`${API_URL}/api/tasks`, {
         method: "POST",
         headers: {
@@ -67,8 +67,7 @@ export default function Dashboard() {
 
   const updateStatus = async (id: number, status: string) => {
     try {
-      // ✅ FIXED: Syntax error - was using backticks wrong
-      // ✅ FIXED: Use API_URL instead of hardcoded localhost
+      // ✅ FIXED: Correct fetch syntax with parentheses
       await fetch(`${API_URL}/api/tasks/${id}`, {
         method: "PUT",
         headers: {

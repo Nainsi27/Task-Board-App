@@ -13,7 +13,7 @@ export default function SignupPage() {
 
   const handleSignup = async () => {
     try {
-      // ✅ FIXED: Use API_URL instead of hardcoded localhost
+      // ✅ FIXED: Correct fetch syntax with parentheses
       const res = await fetch(`${API_URL}/api/auth/signup`, {
         method: "POST",
         headers: {

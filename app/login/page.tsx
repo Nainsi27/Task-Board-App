@@ -12,7 +12,7 @@ export default function LoginPage() {
 
   const handleLogin = async () => {
     try {
-      // ✅ FIXED: Use API_URL instead of hardcoded localhost
+      // ✅ FIXED: Correct fetch syntax with parentheses
       const res = await fetch(`${API_URL}/api/auth/login`, {
         method: "POST",
         headers: {
